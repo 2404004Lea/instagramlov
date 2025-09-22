@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instagram WEB - Explorar</title>
+    <link href="style-explorar.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera">
+        <div class="contenedor-cabecera">
+            <a href="index.html" class="logo">Instagram- LOVE</a>
+            <div class="barra-busqueda">
+                <input type="text" class="input-busqueda" placeholder="Buscar...">
+            </div>
+            <nav class="iconos-navegacion">
+                <a href="index.html" class="icono-nav">🏠</a>
+                <a href="mensajes.html" class="icono-nav">💬</a>
+                <a href="explorar.html" class="icono-nav activo">🔍</a>
+                <a href="perfil.html" class="icono-nav">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor-principal">
+        <section class="seccion-explorar">
+            <h1 class="titulo-explorar">Explorar</h1>
+            
+            <!-- Búsqueda principal -->
+            <div class="busqueda-principal">
+                <input type="text" placeholder="Buscar cuentas y etiquetas" id="inputBusquedaPrincipal">
+            </div>
+
+            <!-- Categorías -->
+            <div class="categorias-exploracion">
+                <div class="categoria activa" onclick="cambiarCategoria(this, 'todo')">Todo</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'tienda')">Tienda</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'estilo')">Estilo</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'viajes')">Viajes</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'arquitectura')">Arquitectura</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'decoracion')">Decoración</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'comida')">Comida</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'arte')">Arte</div>
+                <div class="categoria" onclick="cambiarCategoria(this, 'musica')">Música</div>
+            </div>
+
+            <!-- Cuadrícula de exploración -->
+            <div class="cuadricula-explorar" id="cuadriculaExplorar">
+                <!-- Elemento destacado -->
+                <div class="elemento-cuadricula destacado" onclick="abrirPost(1)">
+                    <img src="post2_sana.jpg" alt="Post destacado" class="imagen-elemento">
+                    <div class="indicador-multiple">📷</div>
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>1.2k</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elementos normales -->
+                <div class="elemento-cuadricula" onclick="abrirPost(2)">
+                    <img src="post_yo.jpeg" alt="Post" class="imagen-elemento">
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>120</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(3)">
+                    <img src="post_tae.jpg" alt="Post" class="imagen-elemento">
+                    <div class="indicador-multiple">🎥</div>
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>120</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(4)">
+                    <img src="nayeon.jpeg" alt="Post" class="imagen-elemento">
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>1.5k</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>67</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(5)">
+                    <img src="sana.jpeg" alt="Post" class="imagen-elemento">
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>743</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>28</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(6)">
+                    <img src="jimin.jpeg" alt="Post" class="imagen-elemento">
+                    <div class="indicador-multiple">📷</div>
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>965</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>34</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(7)">
+                    <img src="tae.jpg" alt="Post" class="imagen-elemento">
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>1.8k</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>92</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(8)">
+                    <img src="agustd.jpg" alt="Post" class="imagen-elemento">
+                    <div class="indicador-multiple">🎥</div>
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>2.1k</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>156</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elemento-cuadricula" onclick="abrirPost(9)">
+                    <img src="jennie.jpg" alt="Post" class="imagen-elemento">
+                    <div class="overlay">
+                        <div class="stats-overlay">
+                            <div class="stat">
+                                <span>❤️</span>
+                                <span>1.3k</span>
+                            </div>
+                            <div class="stat">
+                                <span>💬</span>
+                                <span>78</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Función para cambiar categoría
+        function cambiarCategoria(elemento, categoria) {
+            // Remover clase activa de todas las categorías
+            document.querySelectorAll('.categoria').forEach(cat => {
+                cat.classList.remove('activa');
+            });
+            
+            // Agregar clase activa al elemento clickeado
+            elemento.classList.add('activa');
+            
+            // Simular carga de contenido
+            cargarContenidoCategoria(categoria);
+        }
+
+        // Simular carga de contenido por categoría
+        function cargarContenidoCategoria(categoria) {
+            const cuadricula = document.getElementById('cuadriculaExplorar');
+            
+            // Efecto de carga
+            cuadricula.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                cuadricula.style.opacity = '1';
+                console.log(`Cargando contenido de: ${categoria}`);
+            }, 300);
+        }
+
+        // Función para abrir post
+        function abrirPost(postId) {
+            console.log(`Abriendo post ${postId}`);
+            // Aquí podrías navegar a la página del post o abrir un modal
+            alert(`Post ${postId} - Funcionalidad próximamente`);
+        }
+
+        // Búsqueda en tiempo real
+        const inputBusqueda = document.getElementById('inputBusquedaPrincipal');
+        inputBusqueda.addEventListener('input', function() {
+            const termino = this.value.toLowerCase();
+            
+            if (termino.length > 2) {
+                console.log(`Buscando: ${termino}`);
+                // Aquí implementarías la lógica de búsqueda
+                realizarBusqueda(termino);
+            }
+        });
+
+        // Función de búsqueda
+        function realizarBusqueda(termino) {
+            const cuadricula = document.getElementById('cuadriculaExplorar');
+            
+            // Simular búsqueda
+            cuadricula.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                cuadricula.style.opacity = '1';
+                console.log(`Resultados para: ${termino}`);
+            }, 500);
+        }
+
+        // Lazy loading de imágenes
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    const img = entrada.target;
+                    img.classList.remove('cargando');
+                }
+            });
+        });
+
+        // Observar todas las imágenes
+        document.querySelectorAll('.imagen-elemento').forEach(img => {
+            observador.observe(img);
+        });
+
+        // Scroll infinito simulado
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 1000) {
+                cargarMasContenido();
+            }
+        });
+
+        // Función para cargar más contenido
+        function cargarMasContenido() {
+            console.log('Cargando más contenido...');
+            // Aquí agregarías más elementos a la cuadrícula
+        }
+    </script>
+</body>
+</html>

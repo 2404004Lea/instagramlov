@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="style-perfil.css" rel="stylesheet">
+    <title>Instagram WEB - Perfil</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera">
+        <div class="contenedor-cabecera">
+            <a href="index.html" class="logo">Instagram - LOVE </a>
+            <div class="barra-busqueda">
+                <input type="text" class="input-busqueda" placeholder="Buscar...">
+            </div>
+            <nav class="iconos-navegacion">
+                <a href="index.html" class="icono-nav">🏠</a>
+                <a href="mensajes.html" class="icono-nav">💬</a>
+                <a href="explorar.html" class="icono-nav">🔍</a>
+                <a href="perfil.html" class="icono-nav activo">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor-principal">
+        <!-- Cabecera del perfil -->
+        <div class="cabecera-perfil">
+            <img src="yo.jpeg" alt="Foto de perfil" class="avatar-perfil">
+            
+            <div class="info-perfil">
+                <div class="fila-superior">
+                    <h1 class="nombre-usuario">naynyny</h1>
+                    <button class="boton-editar-perfil" onclick="editarPerfil()">Editar perfil</button>
+                    <button class="boton-compartir" onclick="compartirPerfil()">📤</button>
+                </div>
+                
+                <div class="estadisticas">
+                    <div class="estadistica">
+                        <span class="numero">0</span>
+                        <span class="label">publicaciones</span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="numero">117</span>
+                        <span class="label">seguidores</span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="numero">33</span>
+                        <span class="label">seguidos</span>
+                    </div>
+                </div>
+                
+                <div class="biografia">
+                    <div class="nombre-completo">Naylea Aguilar</div>
+                    <div class="texto-biografia">Sueños y arcoiris </div>
+                    <div class="texto-biografia"> @delfrojo</div>
+                    <div class="texto-biografia">📍 México</div>
+                      <a class="texto-biografia" href="https://vs.co/naynyfly" target="_blank">vs.co/naynyfly</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destacadas -->
+        <div class="seccion-destacadas">
+            <div class="contenedor-destacadas">
+                <div class="destacada" onclick="verDestacada('viajes')">
+                    <div class="circulo-destacada">
+                        <img src="images/destacada_viajes.jpeg" alt="Viajes" class="imagen-destacada">
+                    </div>
+                    <span class="titulo-destacada">Viajes</span>
+                </div>
+                
+                <div class="destacada" onclick="verDestacada('musica')">
+                    <div class="circulo-destacada">
+                        <img src="destacada_musica.jpeg" alt="Música" class="imagen-destacada">
+                    </div>
+                    <span class="titulo-destacada">Música</span>
+                </div>
+                
+                <div class="destacada" onclick="verDestacada('amigos')">
+                    <div class="circulo-destacada">
+                        <img src="destacada_amigos.jpeg" alt="Amigos" class="imagen-destacada">
+                    </div>
+                    <span class="titulo-destacada">Amigos</span>
+                </div>
+                
+                <div class="destacada" onclick="verDestacada('arte')">
+                    <div class="circulo-destacada">
+                        <img src="destacada_arte.jpeg" alt="Arte" class="imagen-destacada">
+                    </div>
+                    <span class="titulo-destacada">Arte</span>
+                </div>
+
+                <div class="destacada" onclick="verDestacada('recuerdos')">
+                    <div class="circulo-destacada">
+                        <img src="destacada_recuerdos.jpeg" alt="Recuerdos" class="imagen-destacada">
+                    </div>
+                    <span class="titulo-destacada">Recuerdos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pestañas de navegación -->
+        <div class="pestanas-perfil">
+            <a href="#" class="pestana activa" onclick="cambiarPestana(this, 'posts')">
+                <span>📷</span>
+                <span>Publicaciones</span>
+            </a>
+            <a href="#" class="pestana" onclick="cambiarPestana(this, 'guardados')">
+                <span>🔖</span>
+                <span>Guardado</span>
+            </a>
+            <a href="#" class="pestana" onclick="cambiarPestana(this, 'etiquetado')">
+                <span>👤</span>
+                <span>Etiquetado</span>
+            </a>
+        </div>
+
+        <!-- Cuadrícula de posts -->
+        <div class="cuadricula-posts" id="cuadriculaPosts">
+            <div class="post-cuadricula" onclick="abrirPost(1)">
+                <img src="post1_yo.jpeg" alt="Post 1" class="imagen-post">
+                <div class="indicador-carrusel">📷</div>
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>245</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(2)">
+                <img src="post2_yo.jpeg" alt="Post 2" class="imagen-post">
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>189</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(3)">
+                <img src="post5_yo.jpeg" alt="Post 3" class="imagen-post">
+                <div class="indicador-carrusel">🎥</div>
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>567</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>23</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(4)">
+                <img src="post4_yp.jpeg" alt="Post 4" class="imagen-post">
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>892</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(5)">
+                <img src="post6_yo.jpeg" alt="Post 5" class="imagen-post">
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>334</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>17</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(6)">
+                <img src="post8_yo.jpeg" alt="Post 6" class="imagen-post">
+                <div class="indicador-carrusel">📷</div>
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>721</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>34</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(7)">
+                <img src="post9_yo.jpeg" alt="Post 7" class="imagen-post">
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>445</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>19</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(8)">
+                <img src="destacada_recuerdos.jpeg" alt="Post 8" class="imagen-post">
+                <div class="indicador-carrusel">🎥</div>
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>1.2k</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>78</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-cuadricula" onclick="abrirPost(9)">
+                <img src="destacada_viajes.jpeg" alt="Post 9" class="imagen-post">
+                <div class="overlay-post">
+                    <div class="stats-post">
+                        <div class="stat-post">
+                            <span>❤️</span>
+                            <span>623</span>
+                        </div>
+                        <div class="stat-post">
+                            <span>💬</span>
+                            <span>28</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para cambiar pestaña
+        function cambiarPestana(elemento, tipo) {
+            // Remover clase activa de todas las pestañas
+            document.querySelectorAll('.pestana').forEach(pestana => {
+                pestana.classList.remove('activa');
+            });
+            
+            // Agregar clase activa a la pestaña clickeada
+            elemento.classList.add('activa');
+            
+            // Cargar contenido según el tipo
+            cargarContenidoPestana(tipo);
+        }
+
+        // Cargar contenido de pestaña
+        function cargarContenidoPestana(tipo) {
+            const cuadricula = document.getElementById('cuadriculaPosts');
+            
+            // Efecto de carga
+            cuadricula.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                cuadricula.style.opacity = '1';
+                
+                if (tipo === 'guardados') {
+                    console.log('Cargando posts guardados');
+                    // Aquí cargarías posts guardados
+                } else if (tipo === 'etiquetado') {
+                    console.log('Cargando posts etiquetados');
+                    // Aquí cargarías posts donde está etiquetado
+                } else {
+                    console.log('Cargando publicaciones');
+                    // Mostrar publicaciones normales
+                }
+            }, 300);
+        }
+
+        // Función para abrir post
+        function abrirPost(postId) {
+            console.log(`Abriendo post ${postId}`);
+            alert(`Post ${postId} - Funcionalidad próximamente`);
+        }
+
+        // Función para ver destacada
+        function verDestacada(nombre) {
+            console.log(`Viendo destacada: ${nombre}`);
+            alert(`Destacada "${nombre}" - Funcionalidad próximamente`);
+        }
+
+        // Función para editar perfil
+        function editarPerfil() {
+            alert('Función de editar perfil próximamente');
+        }
+
+        // Función para compartir perfil
+        function compartirPerfil() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Perfil de naynyny',
+                    text: 'Mira mi perfil en Instagram',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback para navegadores que no soportan Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('¡Enlace del perfil copiado al portapapeles!');
+                });
+            }
+        }
+
+        // Scroll para destacadas en móvil
+        const destacadas = document.querySelector('.contenedor-destacadas');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        destacadas.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - destacadas.offsetLeft;
+            scrollLeft = destacadas.scrollLeft;
+        });
+
+        destacadas.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        destacadas.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        destacadas.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - destacadas.offsetLeft;
+            const walk = (x - startX) * 2;
+            destacadas.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>

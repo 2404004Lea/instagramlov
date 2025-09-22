@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instagram WEB - Mensajes</title>
+    <link href="style-mensajes.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera">
+        <div class="contenedor-cabecera">
+            <a href="index.html" class="logo">Instagram- LOVE</a>
+            <div class="barra-busqueda">
+                <input type="text" class="input-busqueda" placeholder="Buscar...">
+            </div>
+            <nav class="iconos-navegacion">
+                <a href="index.html" class="icono-nav">🏠</a>
+                <a href="mensajes.html" class="icono-nav activo">💬</a>
+                <a href="explorar.html" class="icono-nav">🔍</a>
+                <a href="perfil.html" class="icono-nav">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor-mensajes">
+        <!-- Lista de conversaciones -->
+        <div class="lista-conversaciones">
+            <div class="cabecera-conversaciones">
+                <div class="titulo-conversaciones">
+                    <h1>naynyny</h1>
+                    <button class="boton-mensaje-nuevo">✏️</button>
+                </div>
+                <div class="busqueda-conversaciones">
+                    <input type="text" placeholder="Buscar">
+                </div>
+            </div>
+
+            <div class="lista-chats">
+                <div class="elemento-chat activo" onclick="abrirChat('sana')">
+                    <img src="sana.jpeg" alt="Sana" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">m.by___sana</div>
+                        <div class="vista-previa-chat">Hola! Como estas? 😊</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">hace 5min</div>
+                        <div class="insignia-no-leido">3</div>
+                    </div>
+                </div>
+
+                <div class="elemento-chat" onclick="abrirChat('nayeon')">
+                    <img src="nayeon.jpeg" alt="Nayeon" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">nayeonyny</div>
+                        <div class="vista-previa-chat">Te veo mañana!</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">hace 1h</div>
+                        <div class="insignia-no-leido">1</div>
+                    </div>
+                </div>
+
+                <div class="elemento-chat" onclick="abrirChat('jimin')">
+                    <img src="jimin.jpeg" alt="Jimin" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">J.M</div>
+                        <div class="vista-previa-chat">Gracias por todo ❤️</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">hace 2h</div>
+                    </div>
+                </div>
+
+                <div class="elemento-chat" onclick="abrirChat('tae')">
+                    <img src="tae.jpg" alt="Tae" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">THV</div>
+                        <div class="vista-previa-chat">Enviaste una foto</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">ayer</div>
+                    </div>
+                </div>
+
+                <div class="elemento-chat" onclick="abrirChat('agustd')">
+                    <img src=agustd.jpg" alt="Agust D" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">agustd</div>
+                        <div class="vista-previa-chat">👍</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">hace 3d</div>
+                    </div>
+                </div>
+
+                <div class="elemento-chat" onclick="abrirChat('jennie')">
+                    <img src="jennie.jpg" alt="Jennie" class="avatar-chat">
+                    <div class="info-chat">
+                        <div class="nombre-chat">jennierubyjane</div>
+                        <div class="vista-previa-chat">¡Feliz cumpleaños!</div>
+                    </div>
+                    <div class="meta-chat">
+                        <div class="tiempo-chat">hace 1sem</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de chat -->
+        <div class="area-chat" id="areaChat">
+            <div class="cabecera-chat">
+                <img src="sana.jpeg" alt="Sana" class="avatar-cabecera-chat">
+                <div class="info-cabecera-chat">
+                    <h3>m.by___sana</h3>
+                    <p>Activa hace 2 min</p>
+                </div>
+                <div class="opciones-chat">
+                    <button class="boton-opcion-chat">📞</button>
+                    <button class="boton-opcion-chat">📹</button>
+                    <button class="boton-opcion-chat">ℹ️</button>
+                </div>
+            </div>
+
+            <div class="area-mensajes" id="areaMensajes">
+                <div class="mensaje">
+                    <img src="sana.jpeg" alt="Sana" class="avatar-mensaje">
+                    <div>
+                        <div class="contenido-mensaje">¡Hola! ¿Cómo estás?</div>
+                        <div class="tiempo-mensaje">14:30</div>
+                    </div>
+                </div>
+
+                <div class="mensaje enviado">
+                    <div>
+                        <div class="contenido-mensaje">¡Hola Sana! Todo bien, gracias 😊</div>
+                        <div class="tiempo-mensaje">14:32</div>
+                    </div>
+                </div>
+
+                <div class="mensaje">
+                    <img src="sana.jpeg" alt="Sana" class="avatar-mensaje">
+                    <div>
+                        <div class="contenido-mensaje">¿Qué tal el día?</div>
+                        <div class="tiempo-mensaje">14:33</div>
+                    </div>
+                </div>
+
+                <div class="mensaje enviado">
+                    <div>
+                        <div class="contenido-mensaje">Muy productivo, gracias por preguntar</div>
+                        <div class="tiempo-mensaje">14:35</div>
+                    </div>
+                </div>
+
+                <div class="mensaje">
+                    <img src="sana.jpeg" alt="Sana" class="avatar-mensaje">
+                    <div>
+                        <div class="contenido-mensaje">Hola! Como estas? 😊</div>
+                        <div class="tiempo-mensaje">hace 5min</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="area-input-mensaje">
+                <textarea class="input-mensaje" placeholder="Escribe un mensaje..." rows="1"></textarea>
+                <button class="boton-enviar" onclick="enviarMensaje()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Redimensionar automáticamente el textarea
+        const inputMensaje = document.querySelector('.input-mensaje');
+        inputMensaje.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+        });
+
+        // Función para enviar mensaje
+        function enviarMensaje() {
+            const input = document.querySelector('.input-mensaje');
+            const mensaje = input.value.trim();
+            
+            if (mensaje) {
+                const areaMensajes = document.getElementById('areaMensajes');
+                const ahora = new Date();
+                const tiempo = ahora.getHours().toString().padStart(2, '0') + ':' + 
+                              ahora.getMinutes().toString().padStart(2, '0');
+                
+                const divMensaje = document.createElement('div');
+                divMensaje.className = 'mensaje enviado';
+                divMensaje.innerHTML = `
+                    <div>
+                        <div class="contenido-mensaje">${mensaje}</div>
+                        <div class="tiempo-mensaje">${tiempo}</div>
+                    </div>
+                `;
+                
+                areaMensajes.appendChild(divMensaje);
+                areaMensajes.scrollTop = areaMensajes.scrollHeight;
+                
+                input.value = '';
+                input.style.height = 'auto';
+            }
+        }
+
+        // Enviar mensaje con Enter
+        inputMensaje.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                enviarMensaje();
+            }
+        });
+
+        // Función para abrir chat
+        function abrirChat(chatId) {
+            // Remover clase activo de todos los chats
+            document.querySelectorAll('.elemento-chat').forEach(item => {
+                item.classList.remove('activo');
+            });
+            
+            // Agregar clase activo al chat clickeado
+            event.currentTarget.classList.add('activo');
+            
+            // Mostrar área de chat en móvil
+            const areaChat = document.getElementById('areaChat');
+            areaChat.classList.add('activo');
+        }
+
+        // Auto scroll hacia abajo
+        const areaMensajes = document.getElementById('areaMensajes');
+        areaMensajes.scrollTop = areaMensajes.scrollHeight;
+    </script>
+</body>
+</html>

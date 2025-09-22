@@ -1,0 +1,436 @@
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #262626;
+        }
+
+        /* Cabecera */
+        .cabecera {
+            background-color: white;
+            border-bottom: 1px solid #dbdbdb;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 54px;
+            z-index: 1000;
+        }
+
+        .contenedor-cabecera {
+            max-width: 975px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #262626;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+             -webkit-background-clip: text;
+            background-clip: text;
+           -webkit-text-fill-color: transparent;
+        }
+
+        .barra-busqueda {
+            flex: 1;
+            max-width: 268px;
+            margin: 0 20px;
+        }
+
+        .input-busqueda {
+            width: 100%;
+            height: 36px;
+            padding: 0 16px;
+            background-color: #efefef;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .iconos-navegacion {
+            display: flex;
+            gap: 24px;
+        }
+
+        .icono-nav {
+            font-size: 24px;
+            text-decoration: none;
+            color: #262626;
+        }
+
+        .icono-nav.activo {
+            color: #0095f6;
+        }
+
+        /* Contenedor principal */
+        .contenedor-principal {
+            max-width: 975px;
+            margin: 0 auto;
+            padding-top: 84px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Cabecera del perfil */
+        .cabecera-perfil {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            margin-bottom: 44px;
+            padding: 0 20px;
+        }
+
+        .avatar-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #dbdbdb;
+        }
+
+        .info-perfil {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .fila-superior {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nombre-usuario {
+            font-size: 28px;
+            font-weight: 300;
+            color: #262626;
+        }
+
+        .boton-editar-perfil {
+            background-color: #efefef;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 5px 9px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .boton-compartir {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .estadisticas {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .estadistica {
+            display: flex;
+            gap: 4px;
+            font-size: 16px;
+        }
+
+        .numero {
+            font-weight: 600;
+        }
+
+        .label {
+            color: #262626;
+        }
+
+        .biografia {
+            max-width: 400px;
+        }
+
+        .nombre-completo {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .texto-biografia {
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .enlace-biografia {
+            color: #00376b;
+            text-decoration: none;
+        }
+
+        /* Destacadas (Stories guardadas) */
+        .seccion-destacadas {
+            padding: 0 20px;
+            margin-bottom: 32px;
+        }
+
+        .contenedor-destacadas {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .contenedor-destacadas::-webkit-scrollbar {
+            display: none;
+        }
+
+        .destacada {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 87px;
+            cursor: pointer;
+        }
+
+        .circulo-destacada {
+            width: 77px;
+            height: 77px;
+            border-radius: 50%;
+            border: 1px solid #dbdbdb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .imagen-destacada {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .titulo-destacada {
+            font-size: 12px;
+            color: #262626;
+            text-align: center;
+            max-width: 64px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Navegación de pestañas */
+        .pestanas-perfil {
+            border-top: 1px solid #dbdbdb;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .pestana {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 0;
+            margin: 0 30px;
+            color: #8e8e8e;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .pestana.activa {
+            color: #262626;
+            border-top-color: #262626;
+        }
+
+        /* Cuadrícula de posts */
+        .cuadricula-posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            max-width: 935px;
+            margin: 0 auto;
+        }
+
+        .post-cuadricula {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        .post-cuadricula:hover .overlay-post {
+            opacity: 1;
+        }
+
+        .imagen-post {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .post-cuadricula:hover .imagen-post {
+            transform: scale(1.05);
+        }
+
+        .overlay-post {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .stats-post {
+            display: flex;
+            gap: 16px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .stat-post {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Indicador de múltiples imágenes */
+        .indicador-carrusel {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            color: white;
+            font-size: 16px;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estado sin posts */
+        .sin-posts {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .sin-posts h2 {
+            font-size: 28px;
+            font-weight: 300;
+            color: #262626;
+            margin-bottom: 8px;
+        }
+
+        .sin-posts p {
+            color: #8e8e8e;
+            font-size: 14px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .contenedor-cabecera {
+                padding: 0 16px;
+            }
+
+            .barra-busqueda {
+                display: none;
+            }
+
+            .contenedor-principal {
+                padding: 54px 16px 0;
+            }
+
+            .cabecera-perfil {
+                gap: 30px;
+                margin-bottom: 32px;
+                padding: 0;
+            }
+
+            .avatar-perfil {
+                width: 77px;
+                height: 77px;
+            }
+
+            .nombre-usuario {
+                font-size: 20px;
+            }
+
+            .fila-superior {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .estadisticas {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .seccion-destacadas {
+                padding: 0;
+            }
+
+            .cuadricula-posts {
+                gap: 2px;
+            }
+
+            .stats-post {
+                font-size: 14px;
+                gap: 12px;
+            }
+
+            .pestana {
+                margin: 0 15px;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cabecera-perfil {
+                gap: 16px;
+            }
+
+            .estadisticas {
+                gap: 16px;
+            }
+
+            .nombre-usuario {
+                font-size: 18px;
+            }
+        }
+
+        /* Animaciones */
+        .post-cuadricula {
+            animation: aparecerPost 0.5s ease-out;
+        }
+
+        @keyframes aparecerPost {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
